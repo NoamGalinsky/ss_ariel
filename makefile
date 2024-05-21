@@ -6,7 +6,7 @@ LIB_REC = advancedClassificationRecursion.o basicClassification.o
 
 all : maindloop maindrec loops loopd recursived recursives mains
 
-PHONY : clean all
+.PHONY : clean all
 
 loops : libclassloops.a
 libclassloops.a : $(LIB_LOOPS)
