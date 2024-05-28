@@ -21,4 +21,4 @@ my_Knapsack.o : my_Knapsack.c
 	$(CC) $(FLAGS) -c my_Knapsack.c -o my_Knapsack.o
 
 clean : 
-	rm my_Knapsack *.o my_graph
+	rm my_graph my_Knapsack *.o
