@@ -54,7 +54,7 @@ int main(){
     }
 
     int maxResult = knapSack(weights, values, ans);
-    printf("Maximum value: %d", maxResult);
+    printf("Maximum value: %d\r", maxResult);
     printf("\n");
     printf("Selected items:");
     for (int i = 0 ; i < SIZE ; i++){
