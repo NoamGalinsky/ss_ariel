@@ -1,0 +1,3 @@
+[submodule "my_sub"]
+	path = my_sub
+	url = https://github.com/NoamGalinsky/ss_ariel.git
