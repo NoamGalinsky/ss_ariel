@@ -1,6 +1,0 @@
-[submodule "module"]
-	path = module
-	url = https://github.com/NoamGalinsky/ss_ariel.git
-[submodule "new_module"]
-	path = new_module
-	url = https://github.com/NoamGalinsky/ss_ariel.git
