@@ -1,9 +1,9 @@
-#ReadMe
+# ReadMe
 in this file i will explain all my function in my project
-##data_structure
+## data_structure
 in adta_structure.hpp i was declare about all my data structure and there function,
 in addition i was add the implemention of DynamicList and Pair becose there are using template.
-###DynamicList
+### DynamicList
 i build the DynamicList with dinamic array of T
 resize():
   when the array is full we add size*2 to our array
@@ -23,10 +23,10 @@ get(index)
   return reference of the element in the index place
 isEmpty()
 return if our DynamicList is empty or not
-###Pair
+### Pair
 object of key and value
 the function of pair is very simple, only geter and seter
-###Edge
+### Edge
 edge is consist from 3 integer while the first is for the origin the second is for destination and the fhird is for wegiht
 get() set()
 geter and seter
@@ -35,7 +35,7 @@ is for to copy edge and check if 2 edges are equal
 relax()
 for dijekstra, check if the destination of some edge from the start vertx is greater from the destination of is negiboor + there weight
 and change if it is
-###Myqueue
+### Myqueue
 represent a queue with only the function i need
 put()
   add element in the last place of my queue
@@ -43,7 +43,7 @@ get()
   get the first element that we put in the queue and deleted him
 empty()
   return true if the queue is empty
-###MyStack
+### MyStack
   represent a stack with only the function i need
 push()
   add element to my stack
@@ -53,7 +53,7 @@ empty()
   return true if the stack is empty
 remove()
   delete the last elemnt we pushed
-###PriorityQueue
+### PriorityQueue
 is priority queue for edge while the edge element are
 origin - the index of the vetex
 weight - the disstance from the start vertex
@@ -61,7 +61,7 @@ that sort the vertexes by there weight
 add, empty and getSize are very basic and simple function
 extractMin()
   going thrue all the element and return and delete the vertex with the minimum wehit
-###unionFind
+### unionFind
 is build from Pair, while the
 key - group number
 value - vertex number
