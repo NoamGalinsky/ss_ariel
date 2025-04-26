@@ -71,3 +71,42 @@ value - vertex number
   return the group number of some vertex
 #### make union()
   get 2 group and union them 
+## graph
+our graph is build from array of DynamicList while the array is in size of the number of vertex and evry list in place i is represent all the negboor of vertex i
+### constructor and copy constructor
+build the graph with array in size of vertex that we get from the user
+### addEdge
+add a new edge to the list in array[u].
+the edg adding in her place while it save on sorting vertex
+### edgeExist
+return if some edge exist or not
+### removeEdge
+get origin and destination and delete this edge (if she exist)
+### printGraph
+print the graph
+### getNumVertix
+return the num of vertix in the graph
+### findEdge
+find some edge in the graph
+if she dont exist return edge(-1, -1, -1)
+## algorithms
+the way i build the algorithms is from the course alghorithms 1
+
+## main
+the main i build in a dinamic way so the user can add a new graph and try all the algorithms on him
+
+### input1
+in addition to the open main
+i add a file that the main can run it and it contain a graph
+### nput2
+the file input2 also run on the main and consist a dissconected graph
+
+## test_function 
+a test file that contain tests for most of the function in this project
+### strPrint
+convert some graph to string and in this way i can check if 2 graph are equal
+
+## makefile
+in addition to targets test Main valgring and clean
+i add Main_with_input1 and Main_with_input2 to run my files on the main
+
