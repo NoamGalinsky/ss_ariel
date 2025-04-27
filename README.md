@@ -1,8 +1,12 @@
 # ReadMe
-in this file i will explain all my function in my project
+
+This project is organized into several files, each handling a specific part of the implementation:
+
 ## data_structure
 
-Declared in `data_structure.hpp`. `DynamicList` and `Pair` are fully implemented in the header due to template usage.
+This file defines all the data structures used throughout the project.
+- Contains class definitions for all data structures.
+- Includes the full implementation of the **DynamicList** and **Pair** classes, as they are templated and must be defined in the header.
 
 ### DynamicList
 
@@ -67,8 +71,10 @@ Union-Find structure using `Pair`.
 
 ## graph
 
-Graph is represented using an array of `DynamicList`.  
-Each index `i` represents the neighbors of vertex `i`.
+This file defines the **Graph** class and implements all related functions and constructors.
+- The graph is represented using an **adjacency list**, implemented as an array (or vector) of lists.
+- The print function outputs each vertex and its neighbors in the format:  
+  `(neighboring vertex, edge weight)`.
 
 - **Constructor / Copy Constructor** – Initializes graph with a given number of vertices.
 - `addEdge()` – Adds a sorted edge to the vertex list.
@@ -80,11 +86,15 @@ Each index `i` represents the neighbors of vertex `i`.
 
 ## algorithms
 
-Algorithms are implemented based on the *Algorithms 1* university course.
+Defines the **Algorithms** class, which includes implementations for all required algorithms.
+- Algorithm implementations are based on material from the *Algorithms 1* course.
+- Each algorithm returns a new graph when needed.
+- The graph that return from the **Dijkstra** function,his edge weights represent the shortest distance from the starting vertex.
 
 ## main
 
-The `main` function is interactive and lets the user add a graph and test algorithms.
+Contains the `main` function that runs the application.
+- Provides a user interface allowing users to build and interact with a graph.
 
 ### input1.txt
 
@@ -96,11 +106,15 @@ Another test file with a disconnected graph. Can be run with `Main_with_input2`.
 
 ## test_function
 
-Includes unit tests for the project's major features.
+Includes unit tests for the entire project.
+- Ensures that all implemented functions behave as expected.
 
 - `strPrint()` – Converts graphs to string format for easy comparison.
   
-## 🛠 makefile
+## makefile
+Automates the build process.
+- Compiles all source files.
+- Runs the `main` function using a predefined input file.
 
 Includes standard and extended targets:
 
