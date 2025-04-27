@@ -124,8 +124,3 @@ Includes standard and extended targets:
 - `clean` – Removes compiled files.
 - `Main_with_input1` – Runs main with `input1.txt`.
 - `Main_with_input2` – Runs main with `input2.txt`.
-
-## AI
-i am using AI to edit the readme file and make him more comfortable for reading.
-you can see the first version in the first commit in project 1.
-
