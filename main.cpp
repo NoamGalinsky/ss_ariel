@@ -1,71 +1,100 @@
 /*    noamgal46@gmail.com    */
 
 
-#include <iostream>
-#include "algorithms.hpp"
+#include "SquareMat.hpp"
 
-using namespace std;
-using namespace graph;
+using namespace matrix;
 
 int main() {
-    Algorithms algorithms;
-    int numVertices;
-    cout << "enter number of vertices: ";
-    cin >> numVertices;
-    Graph g(numVertices);
-    cout << "enter number of edges: ";
-    int numEdges;
-    cin >> numEdges;
-    cout << "enter the edge in the format: u v weight" << endl;
-    for (int i = 0; i < numEdges; i++) {
-        int u, v, w;
-        cin >> u >> v >> w;
-        g.addEdge(u, v, w);
-    }
+    cout << "enter size of your matrix: ";
+    int size;
+    cin >> size;
+    SquareMat mat1(size);
+    SquareMat ans(size);
 
-    g.printGraph();
-    int start;
-    cout << "\nenter the start vertex for algorithm: ";
-    cin >> start;
-    cout << start;
-    int choice = 0;
-    while (choice != 6){
-        cout << "\nSelect an algorithm:\n1. BFS\n2. DFS\n3. Dijkstra\n4. Prim\n5. Kruskal\n6. end program\n" << endl;
-        cin >> choice;
-        cout << choice << endl;
-        Graph ans(1);
-        switch (choice) {
-            case 1:
-                ans = algorithms.bfs(start, g);
-                cout << "BFS Tree:\n";
-                ans.printGraph();
-                break;
-            case 2:
-                ans = algorithms.dfs(start, g);
-                cout << "DFS Tree:\n";
-                ans.printGraph();
-                break;
-            case 3:
-                ans = algorithms.dijkstra(start, g);
-                cout << "Dijkstra's Shortest Path Tree:\n";
-                ans.printGraph();
-                break;
-            case 4:
-                ans = algorithms.prim(g);
-                cout << "Prim's MST:\n";
-                ans.printGraph();
-                break;
-            case 5:
-                ans = algorithms.kruskal(g);
-                cout << "Kruskal's MST:\n";
-                ans.printGraph();
-                break;
-            case 6:
-                break;
-            default:
-                cout << "Invalid choice.\n";
-                break;
+    cout << "enter the sum of the matirx cell after cell: " << endl;
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++){
+            double sum;
+            cin >> sum;
+            mat1[i][j] = sum;
         }
     }
+    cout << mat1 << endl;
+    SquareMat mat2(size);
+    cout << "now put in  the sum of matrix number 2 " << endl;
+
+    cout << "enter the sum of the matirx cell after cell: " << endl;
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++){
+            double sum;
+            cin >> sum;
+            mat2[i][j] = sum;
+        }
+    }
+    cout << mat2 << endl;
+    double scalar;
+    int power;
+    cout << "enter scalar value: " << endl;
+    cin >> scalar;
+
+    cout << "enter integer for power: " << endl;
+    cin >> power;
+
+    cout << "mat1 - mat2 = " << endl;
+    ans = mat1 - mat2;
+    cout << ans << endl;
+
+    cout << "mat1 + mat2 = " << endl;
+    ans = mat1 + mat2;
+    cout << ans << endl;
+
+    cout << "-mat1 = " << endl;
+    ans = -mat1;
+    cout << ans << endl;
+
+    cout << "mat1 * mat2 = " << endl;
+    ans = mat1 * mat2;
+    cout << ans << endl;
+
+
+    cout << "mat1 * " << scalar << " = " << endl;
+    ans = mat1 * scalar;
+    cout << ans << endl;
+
+
+    cout << "mat1 % mat2 = " << endl;
+    ans = mat1 % mat2;
+    cout << ans << endl;
+
+    cout << "mat1 % " << scalar << " = " << endl;
+    ans = mat1 % scalar;
+    cout << ans << endl;
+
+    cout << "mat1 / " << scalar << " = " << endl;
+    ans = mat1 / scalar;
+    cout << ans << endl;
+
+    cout << "mat1 ^ " << power << " = " << endl;
+    ans = mat1 ^ power;
+    cout << ans << endl;
+
+    cout << "mat1++ = " << endl;
+    ans = mat1;
+    ans++;
+    cout << ans << endl;
+
+    cout << "mat1-- = " << endl;
+    ans = mat1;
+    ans--;
+    cout << ans << endl;
+
+    cout << "~mat1 = " << endl;
+    ans = ~mat1;
+    cout << ans << endl;
+
+    double det = !mat1;
+    cout << "!mat1 = " << det << endl;
+
     return 0;
 }
